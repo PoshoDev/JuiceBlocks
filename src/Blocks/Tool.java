@@ -15,6 +15,10 @@ public class Tool
         System.out.println(str);
     }
     
+    public static void Printlnn(String str) {
+        System.out.println(str+"\n");
+    }
+    
     public static int ReadInt()
     {
     	return scan.nextInt();
@@ -23,5 +27,18 @@ public class Tool
     public static String ReadString()
     {
     	return scan.nextLine();
+    }
+    
+    public static int Ask(String str, String ...check)
+    {
+    	Print(str);
+    	
+    	String read = ReadString();
+    	
+    	for (int i=0; i<check.length; i++)
+    		if (read == check[0])
+    			return i;
+    	
+    	return -1;
     }
 }
