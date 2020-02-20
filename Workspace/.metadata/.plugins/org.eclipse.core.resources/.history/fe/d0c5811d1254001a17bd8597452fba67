@@ -1,0 +1,14 @@
+package Blocks;
+
+
+
+public class main
+{
+	static Category[] categories;
+	static Task[] tasks;
+	
+	public static void main(String[] args)
+	{
+		Tool.ln("lol");
+	}
+}

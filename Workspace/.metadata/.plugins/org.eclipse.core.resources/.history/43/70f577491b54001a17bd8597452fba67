@@ -1,0 +1,28 @@
+package Blocks;
+
+import java.util.Scanner;
+
+public class Task
+{
+	Category	category;
+	Type 		type;
+	String 		name;
+	String 		notes;
+	String 		url;
+	int 		dueDay;
+	int 		dueMonth;
+	int 		dueYear;
+	int 		timeEst;
+	int 		repeats;
+	boolean		cleared;
+	
+	Task()
+	{
+		
+	}
+	
+	private void CategoriesPrint()
+	{
+		for (int i=0; i<main.categories.Length())
+	}
+}

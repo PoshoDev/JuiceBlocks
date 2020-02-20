@@ -1,0 +1,11 @@
+package Blocks;
+
+static Category[] categories;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Tool.ln("lol");
+	}
+}
