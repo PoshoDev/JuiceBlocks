@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\Users\green\Google Drive\TempX3\JuiceBlocks\Workspace\.metadata\.plugins\org.eclipse.jdt.core
-1770658909.index
-1671692264.index
