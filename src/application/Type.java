@@ -1,6 +1,4 @@
-package Blocks;
-
-import java.util.Scanner;
+package application;
 
 public class Type
 {
