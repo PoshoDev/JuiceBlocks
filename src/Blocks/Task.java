@@ -20,28 +20,29 @@ public class Task
 	Task(Category[] categories)
 	{
 		Tool.Println("--- NEW TASK ---");
-		Tool.Println("Type '?' for category list.");
 		
+		// Category		
 		boolean repeat = true;
-		
 		while(repeat)
 		{
-			String check = "";
-			
-			int look = Tool.Ask(check, "| Category: ", "?");
-			
-			if (look == 0)
-				CategoriesPrint(categories);
-			else
+			int ques = Tool.AskInt("| Category: ", 1, categories.length, '?', 'n');
+			switch (ques)
 			{
-				int got = Integer.parseInt(check);
+				case -1: // Print All
+					CategoriesPrint(categories);
+				break;
 				
-				if (got>0 && got<categories.length)
-				{
-					category = categories[got];
+				case -2: // Make New
+					categories[categories.length] = new Category();
+				break;
+				
+				default:
+					category = categories[ques-1];
 					repeat = false;
-				}
+				break;
 			}
+			
+			
 		}
 			
 	}
@@ -49,13 +50,15 @@ public class Task
 	private void CategoriesPrint(Category[] categories)
 	{
 		if (categories.length<=0 || categories[0]==null)
-			Tool.Println("No Categories found. You should prolly make one?");
+			Tool.Println("||| No Categories found. You should prolly make one?");
 		else
 		{
-			Tool.Println("Categories:");
+			Tool.Println("|| Categories:");
 			
 			for (int i=0; i<categories.length; i++)
-				Tool.Println("| "+(i+1)+":\t"+categories[i].Name());
+				Tool.Println("||| "+(i+1)+":\t"+categories[i].Name());
+			
+			Tool.Print("\n");
 		}
 			
 	}
