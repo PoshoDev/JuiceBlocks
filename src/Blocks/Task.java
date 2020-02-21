@@ -26,14 +26,21 @@ public class Task
 		
 		while(repeat)
 		{
-			int check = Tool.Ask("| Category: ", "?");
+			String check = "";
 			
-			if (check == 0)
+			int look = Tool.Ask(check, "| Category: ", "?");
+			
+			if (look == 0)
 				CategoriesPrint(categories);
 			else
 			{
-				int got = Integer.parseUnsignedInt(got);
-				if ()
+				int got = Integer.parseInt(check);
+				
+				if (got>0 && got<categories.length)
+				{
+					category = categories[got];
+					repeat = false;
+				}
 			}
 		}
 			

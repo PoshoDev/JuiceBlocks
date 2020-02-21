@@ -29,7 +29,20 @@ public class Tool
     	return scan.nextLine();
     }
     
-    public static int Ask(String str, String ...check)
+    public static int Ask(String check, String str, String ...tryy)
+    {
+    	Print(str);
+    	
+    	check = ReadString();
+    	
+    	for (int i=0; i<tryy.length; i++)
+    		if (check == tryy[0])
+    			return i;
+    	
+    	return -1;
+    }
+    
+    public static int Ask2(String str, String ...check)
     {
     	Print(str);
     	
